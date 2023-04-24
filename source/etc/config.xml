@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <payment_code>
+                <active>0</active>
+                <model>ModuleNameFacade</model>
+                <order_status>new_order_status</order_status>
+                <title>payment_title</title>
+                <can_initialize>can_initialize_variable</can_initialize>
+                <can_authorize>can_authorize_variable</can_authorize>
+                <can_capture>can_capture_variable</can_capture>
+                <can_cancel>can_void_variable</can_cancel>
+                <can_refund>can_refund_variable</can_refund>
+                <can_refund_partial_per_invoice>can_refund_variable</can_refund_partial_per_invoice>
+                <can_fetch_transaction_information>can_fetch_variable</can_fetch_transaction_information>
+                <can_fetch_transaction_info>can_fetch_variable</can_fetch_transaction_info>
+                <can_use_checkout>1</can_use_checkout>
+                <is_gateway>1</is_gateway>
+            </tappay_googlepay>
+        </payment>
+    </default>
+</config>

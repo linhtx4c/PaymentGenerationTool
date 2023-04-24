@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="WindowApplication">
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkFixed" id="WindowFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkButton" id="GererateButton">
+            <property name="label" translatable="yes">button</property>
+            <property name="width-request">102</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_GererateButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">399</property>
+            <property name="y">831</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkPaned">
+            <property name="width-request">450</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="width-request">150</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Module Name</property>
+              </object>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="module-name">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="placeholder-text" translatable="yes">VendorName_ModuleName</property>
+              </object>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">False</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="y">16</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkPaned">
+            <property name="width-request">450</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="width-request">150</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Payment Code</property>
+              </object>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="payment-code">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="placeholder-text" translatable="yes">payment_code</property>
+              </object>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">False</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="y">115</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkPaned">
+            <property name="width-request">450</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="width-request">150</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">New Order Status</property>
+              </object>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="new-order-status">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="placeholder-text" translatable="yes">order_status_code</property>
+              </object>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">False</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="y">214</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="width-request">400</property>
+            <property name="height-request">475</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkCheckButton" id="initialize">
+                <property name="label" translatable="yes">Initialize Command</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="draw-indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="capture">
+                <property name="label" translatable="yes">Capture Command</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="draw-indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="void">
+                <property name="label" translatable="yes">Void Command</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="draw-indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">346</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="width-request">400</property>
+            <property name="height-request">475</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkCheckButton" id="authorize">
+                <property name="label" translatable="yes">Authorize Command</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="draw-indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="refund">
+                <property name="label" translatable="yes">Refund Command</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="draw-indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="fetch">
+                <property name="label" translatable="yes">Fetch Command</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="draw-indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">494</property>
+            <property name="y">347</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
