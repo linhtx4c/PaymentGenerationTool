@@ -49,10 +49,9 @@ class Main(Gtk.Window):
                 moduleName = moduleNameArray[1]
                 Module(vendorName, moduleName, componentName)
                 print('Generate Module Done')
-                pattern = re.compile('[a-z]+_[a-z]+')
-                if (paymentCode != '' and pattern.match(paymentCode)): 
+                if (paymentCode != ''): 
                     Payment(vendorName, moduleName, componentName, paymentCode)
-                    Command(vendorName, moduleName, componentName, self.commandList, newOrderStatus)
+                    Command(vendorName, moduleName, componentName, self.commandList, newOrderStatus, paymentCode)
                     print('Generate Payment Done')
                 else:
                     print('Payment Code is invalid')

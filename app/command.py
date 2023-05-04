@@ -8,12 +8,13 @@ from app.file_handler import FileHandler
 
 class Command:
 
-    def __init__(self, vendorName, moduleName, componentName, commandData, newOrderStatus):
+    def __init__(self, vendorName, moduleName, componentName, commandData, newOrderStatus, paymentCode):
         self.vendorName = vendorName
         self.componentName = componentName
         self.moduleName = moduleName
         self.commandData = commandData
         self.newOrderStatus = newOrderStatus
+        self.paymentCode = paymentCode
         self.fileHandler = FileHandler()
         self.httpPath = 'Http'
         self.clientPath = 'Client'
@@ -233,7 +234,8 @@ class Command:
         filePath = os.path.join(self.vendorName, self.moduleName, self.etcPath)
         diData = {
             'VendorName': self.vendorName,
-            'ModuleName': self.moduleName
+            'ModuleName': self.moduleName,
+            'payment_code': self.paymentCode
         }
         commandDeclarationList = []
         if not os.path.exists(filePath):
