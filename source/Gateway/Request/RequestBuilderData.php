@@ -15,7 +15,7 @@ class CommandNameRequestBuilderData implements BuilderInterface
     public function build(array $buildSubject)
     {
 
-        $paymentDO = SubjectReader::readPayment($handlingSubject);
+        $paymentDO = SubjectReader::readPayment($buildSubject);
         $payment = $paymentDO->getPayment();
         $ordere = $paymentDO->getOrder();
 
