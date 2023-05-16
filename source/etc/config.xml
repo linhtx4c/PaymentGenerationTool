@@ -10,7 +10,8 @@
                 <can_initialize>can_initialize_variable</can_initialize>
                 <can_authorize>can_authorize_variable</can_authorize>
                 <can_capture>can_capture_variable</can_capture>
-                <can_cancel>can_void_variable</can_cancel>
+                <can_cancel>can_cancel_variable</can_cancel>
+                <can_void>can_void_variable</can_void>
                 <can_refund>can_refund_variable</can_refund>
                 <can_refund_partial_per_invoice>can_refund_variable</can_refund_partial_per_invoice>
                 <can_fetch_transaction_information>can_fetch_variable</can_fetch_transaction_information>

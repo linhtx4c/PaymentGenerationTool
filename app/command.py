@@ -68,136 +68,26 @@ class Command:
         </arguments>
     </virtualType>
 '''
-        self.initializeCommand = '''
+        self.typeCommand = '''
     <!--Initialize Command-->
-    <virtualType name="ModuleNameInitializeCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
+    <virtualType name="ModuleNameCommandTypeCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
         <arguments>
             <argument name="transferFactory" xsi:type="object">VendorName\ModuleName\Gateway\Http\TransferFactory</argument>
             <argument name="client" xsi:type="object">VendorName\ModuleName\Gateway\Http\Client\Client</argument>
-            <argument name="requestBuilder" xsi:type="object">ModuleNameInitializeRequestBuilder</argument>
-            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\InitializeHandler</argument>
+            <argument name="requestBuilder" xsi:type="object">ModuleNameCommandTypeRequestBuilder</argument>
+            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\CommandTypeHandler</argument>
             <argument name="validator" xsi:type="object">VendorName\ModuleName\Gateway\Validator\Validator</argument>
         </arguments>
     </virtualType>
 
-    <virtualType name="ModuleNameInitializeRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
+    <virtualType name="ModuleNameCommandTypeRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
         <arguments>
             <argument name="builders" xsi:type="array">
-                <item name="payment_code_initialize_request_data" xsi:type="string">VendorName\ModuleName\Gateway\Request\InitializeRequestBuilderData</item>
+                <item name="payment_code_command_type_request_data" xsi:type="string">VendorName\ModuleName\Gateway\Request\CommandTypeRequestBuilderData</item>
             </argument>
         </arguments>
     </virtualType>
 '''
-
-        self.captureCommand = '''
-    <!-- Capture Command -->
-    <virtualType name="ModuleNameCaptureCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
-        <arguments>
-            <argument name="transferFactory" xsi:type="object">VendorName\ModuleName\Gateway\Http\TransferFactory</argument>
-            <argument name="client" xsi:type="object">VendorName\ModuleName\Gateway\Http\Client\Client</argument>
-            <argument name="requestBuilder" xsi:type="object">ModuleNameCaptureRequestBuilder</argument>
-            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\CaptureHandler</argument>
-            <argument name="validator" xsi:type="object">VendorName\ModuleName\Gateway\Validator\Validator</argument>
-        </arguments>
-    </virtualType>
-
-    <virtualType name="ModuleNameCaptureRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
-        <arguments>
-            <argument name="builders" xsi:type="array">
-                <item name="payment_code_capture_request_data" xsi:type="string">VendorName\ModuleName\Gateway\Request\CaptureRequestBuilderData</item>
-            </argument>
-        </arguments>
-    </virtualType>
-'''
-        self.authorizeCommand = '''
-    <!-- Authorize Command-->
-    <virtualType name="ModuleNameAuthorizeCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
-        <arguments>
-            <argument name="transferFactory" xsi:type="object">VendorName\ModuleName\Gateway\Http\TransferFactory</argument>
-            <argument name="client" xsi:type="object">VendorName\ModuleName\Gateway\Http\Client\Client</argument>
-            <argument name="requestBuilder" xsi:type="object">ModuleNameAuthorizeRequestBuilder</argument>
-            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\AuthorizeHandler</argument>
-            <argument name="validator" xsi:type="object">VendorName\ModuleName\Gateway\Validator\Validator</argument>
-        </arguments>
-    </virtualType>
-
-    <virtualType name="ModuleNameAuthorizeRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
-        <arguments>
-            <argument name="builders" xsi:type="array">
-                <item name="payment_code_authorize_request_data" xsi:type="string">VendorName\ModuleName\Gateway\Request\AuthorizeRequestBuilderData</item>
-            </argument>
-        </arguments>
-    </virtualType>
-'''
-
-        self.voidCommand = '''
-    <!-- Void Command-->
-    <virtualType name="ModuleNameVoidCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
-        <arguments>
-            <argument name="transferFactory" xsi:type="object">VendorName\ModuleName\Gateway\Http\TransferFactory</argument>
-            <argument name="client" xsi:type="object">VendorName\ModuleName\Gateway\Http\Client\Client</argument>
-            <argument name="requestBuilder" xsi:type="object">ModuleNameVoidRequestBuilder</argument>
-            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\VoidHandler</argument>
-            <argument name="validator" xsi:type="object">VendorName\ModuleName\Gateway\Validator\Validator</argument>
-        </arguments>
-    </virtualType>
-
-    <virtualType name="ModuleNameVoidRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
-        <arguments>
-            <argument name="builders" xsi:type="array">
-                <argument name="payment_code_void_request_data" xsi:type="object">VendorName\ModuleName\Gateway\Request\VoidRequestBuilderData</argument>
-            </argument>
-        </arguments>
-    </virtualType>
-'''
-        self.refundCommand = '''
-    <!-- Refund Command -->
-    <virtualType name="ModuleNameRefundCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
-        <arguments>
-            <argument name="transferFactory" xsi:type="object">VendorName\ModuleName\Gateway\Http\TransferFactory</argument>
-            <argument name="client" xsi:type="object">VendorName\ModuleName\Gateway\Http\Client\Client</argument>
-            <argument name="requestBuilder" xsi:type="object">ModuleNameRefundRequestBuilder</argument>
-            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\RefundHandler</argument>
-            <argument name="validator" xsi:type="object">VendorName\ModuleName\Gateway\Validator\Validator</argument>
-        </arguments>
-    </virtualType>
-
-    <virtualType name="ModuleNameRefundRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
-        <arguments>
-            <argument name="builders" xsi:type="array">
-                <argument name="payment_code_refund_request_data" xsi:type="object">VendorName\ModuleName\Gateway\Request\RefundRequestBuilderData</argument>
-            </argument>
-        </arguments>
-    </virtualType>
-'''
-        self.fetchCommand = '''
-    <!-- Fetch Transaction Information Command-->
-    <virtualType name="ModuleNameFetchCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
-        <arguments>
-            <argument name="transferFactory" xsi:type="object">VendorName\ModuleName\Gateway\Http\TransferFactory</argument>
-            <argument name="client" xsi:type="object">VendorName\ModuleName\Gateway\Http\Client\Client</argument>
-            <argument name="requestBuilder" xsi:type="object">ModuleNameFetchRequestBuilder</argument>
-            <argument name="handler" xsi:type="object">VendorName\ModuleName\Gateway\Response\FetchHandler</argument>
-            <argument name="validator" xsi:type="object">VendorName\ModuleName\Gateway\Validator\Validator</argument>
-        </arguments>
-    </virtualType>
-
-    <virtualType name="ModuleNameFetchRequestBuilder" type="Magento\Payment\Gateway\Request\BuilderComposite">
-        <arguments>
-            <argument name="builders" xsi:type="array">
-                <argument name="payment_code_fetch_request_data" xsi:type="object">VendorName\ModuleName\Gateway\Request\FetchRequestBuilderData</argument>
-            </argument>
-        </arguments>
-    </virtualType>
-'''
-        self.commandDiList = {
-            self.initialize: self.initializeCommand,
-            self.authorize: self.authorizeCommand,
-            self.capture: self.captureCommand,
-            self.void: self.voidCommand,
-            self.refund: self.refundCommand,
-            self.fetch: self.fetchCommand
-        }
         self.handleDiFile()
         self.handleHttpFolder()
         self.handlePhpCommandFile()
@@ -243,7 +133,8 @@ class Command:
         with open(filePath + '/di.xml', 'w') as file:
             fullText = self.header + self.facade + self.commandPool
             for selectedCommand in self.commandData:
-                fullText += self.commandDiList[selectedCommand]
+                commandText = self.typeCommand.replace('CommandType', selectedCommand.capitalize()).replace('command_type', selectedCommand)
+                fullText += commandText
                 if selectedCommand == 'fetch':
                     selectedCommand = 'fetch_transaction_information'
                 commandDeclarationList.append(self.commandDeclaration.replace(

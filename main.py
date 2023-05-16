@@ -21,8 +21,9 @@ class Main(Gtk.Window):
         self.void = 'void'
         self.refund = 'refund'
         self.fetch = 'fetch'
+        self.cancel = 'cancel'
         self.commandTypeList = ['request', 'handler', 'validate']
-        self.commandNameList = [self.initialize, self.capture, self.authorize, self.void, self.refund, self.fetch]
+        self.commandNameList = [self.initialize, self.capture, self.authorize, self.void, self.refund, self.fetch, self.cancel]
 
         window = self.builder.get_object("WindowApplication")
         window.connect("delete-event", Gtk.main_quit)
